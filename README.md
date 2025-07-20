@@ -8,15 +8,12 @@ Students at St Nicholas face issues when it comes to arriving at school. The nee
 To create a user authentication system that uses a fingerprint module and forms hosted on a web server. The user should be able to enter their name, age, and email address into the form. The user should then be prompted to input their fingerprint into the circuit. User data will then be stored, and on a recognized fingerprint scan, their name, age, and email address will be printed onto an LCD screen. The user should be able to delete their account on the web server and have a dashboard to customize what should be printed onto the LCD screen upon fingerprint scan. The user should also be able to store this data somewhere (e.g., Mzizi) to allow for automatic checking instead of writing names.
 
 ## Technologies Used
-- **MySQL** for databases
-- **PHP** for hosting a web server and handling backend logic
 - **Python** (using RPi.GPIO and pyserial) for controlling Raspberry Pi GPIO pins and serial communication
-- **Frontend Languages** (HTML, CSS, and JavaScript)
 - **Tinkercad** for circuit design and testing
 - **GitHub** for version control
 
 ## Plan
-A web server should be hosted on the Raspberry Pi using PHP to display a form (frontend code will be available in the GitHub repository). Form data will then be sent to the backend. Upon form completion, a buzzer will ring for 10 seconds, signifying that the fingerprint needs to be put. Once the fingerprint is placed by the user, it will be stored in the MySQL database together with the form data, and the LCD screen will print "Sign Up successful!".
+A web server should be hosted on the Raspberry Pi using PHP to display a form . Form data will then be sent to the backend. Upon form completion, a buzzer will ring for 10 seconds, signifying that the fingerprint needs to be put. Once the fingerprint is placed by the user, it will be stored in the MySQL database together with the form data, and the LCD screen will print "Sign Up successful!".
 
 When a fingerprint is input, the program will read the database and check for a matching fingerprint. If one is found, the form data associated with it is printed on the LCD screen, with buttons to turn it off or on.
 
